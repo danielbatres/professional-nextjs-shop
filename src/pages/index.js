@@ -16,7 +16,7 @@ export default function Home() {
               <p>An advanced online playground for Tailwind CSS, including support for things like:</p>
               <ul className="space-y-4">
                 <li className="flex items-center">
-                  <svg className="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg className="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="11" />
                     <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
                   </svg>
@@ -26,7 +26,7 @@ export default function Home() {
                   </p>
                 </li>
                 <li className="flex items-center">
-                  <svg className="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg className="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="11" />
                     <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
                   </svg>
@@ -36,7 +36,7 @@ export default function Home() {
                   </p>
                 </li>
                 <li className="flex items-center">
-                  <svg className="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg className="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="11" />
                     <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
                   </svg>
