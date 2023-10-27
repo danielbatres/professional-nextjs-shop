@@ -1,25 +1,35 @@
-import { useFetch } from "@hooks/useFetch";
-import { endPoints } from "@services/api";
+import { useFetch } from '@hooks/useFetch';
+import { endPoints } from '@services/api';
+import { Chart } from '@common/Chart';
 
-const people = [
-  {
-    name: 'Jane Cooper',
-    title: 'Regional Paradigm Technician',
-    department: 'Optimization',
-    role: 'Admin',
-    email: 'jane.cooper@example.com',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-];
-
-const productLimit = 15;
-const productOffset = 15;
+const productLimit = 60;
+const productOffset = 60;
 
 export default function Dashboard() {
   const products = useFetch(endPoints.products.getProducts(productLimit, productOffset));
 
+  const categoryNames = products?.map(product => product.category);
+  const categoryCount = categoryNames?.map(category => category.name);
+
+  const countOccurences = (array) => array.reduce((prev, current) => ((prev[current] = ++prev[current] || 1), prev), {});
+
+  console.log(categoryNames);
+  console.log(categoryCount); 
+
+  const data = {
+    datasets: [
+      {
+        label: 'Categories',
+        data: countOccurences(categoryCount),
+        borderWitdth: 2,
+        backgroundColor: ['#ffbb11', '#c0c0c0', '#50AF95', '#f3ba2f', '#2a71d0'],
+      },
+    ],
+  };
+
   return (
     <>
+      <Chart className="mb-8 mt-2" chartData={data} />
       <div className="flex flex-col">
         <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
