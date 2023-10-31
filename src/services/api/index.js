@@ -10,6 +10,7 @@ const endPoints = {
   },
   products: {
     getProduct: id => `${base}/products/${id}`,
+    allProducts: `${base}/products`,
     getProducts: (limit, offset) => `${base}/products?limit=${limit}&offset=${offset}`,
     addProducts: `${base}/products`,
     updateProducts: id => `${base}/products/${id}`,
