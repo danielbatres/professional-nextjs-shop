@@ -14,7 +14,7 @@ const endPoints = {
     getProducts: (limit, offset) => `${base}/products?limit=${limit}&offset=${offset}`,
     addProducts: `${base}/products`,
     updateProducts: id => `${base}/products/${id}`,
-    deleteProducts: id => `${base}/products/${id}`
+    deleteProduct: id => `${base}/products/${id}`
   },
   categories: {
     getCategoriesList: `${base}/categories`,
