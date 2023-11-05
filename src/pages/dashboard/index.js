@@ -8,8 +8,8 @@ const productOffset = 60;
 export default function Dashboard() {
   const products = useFetch(endPoints.products.getProducts(productLimit, productOffset));
 
-  const categoryNames = products?.map(product => product.category);
-  const categoryCount = categoryNames?.map(category => category.name);
+  const categoryNames = products?.map((product) => product.category);
+  const categoryCount = categoryNames?.map((category) => category.name);
 
   const countOccurences = (array) => array.reduce((prev, current) => ((prev[current] = ++prev[current] || 1), prev), {});
 
